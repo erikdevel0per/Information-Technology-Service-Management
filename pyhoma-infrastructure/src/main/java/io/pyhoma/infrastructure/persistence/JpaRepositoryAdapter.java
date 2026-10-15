@@ -66,7 +66,9 @@ final class JpaRepositoryAdapter<T extends BaseEntity> implements Repository<T> 
         for (Sort s : query.sorts()) {
             orders.add(s.ascending() ? cb.asc(root.get(s.field())) : cb.desc(root.get(s.field())));
         }
-        orders.add(cb.asc(root.get("id")));
+        if (query.sorts().stream().noneMatch(s -> "id".equals(s.field()))) {
+            orders.add(cb.asc(root.get("id")));
+        }
         cq.orderBy(orders);
         TypedQuery<T> tq = em.createQuery(cq);
         if (query.offset() > 0) {
