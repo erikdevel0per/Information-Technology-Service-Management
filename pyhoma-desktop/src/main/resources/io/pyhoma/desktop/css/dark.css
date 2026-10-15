@@ -1,0 +1,43 @@
+.root {
+    -ph-bg: #1C150D;
+    -ph-surface: #261D12;
+    -ph-surface-2: #2E2417;
+    -ph-hover: #3A2D1D;
+    -ph-line: #3F3222;
+    -ph-line-strong: #5C4A33;
+    -ph-text: #FFFFEA;
+    -ph-text-2: #E8E4CC;
+    -ph-muted: #CBBDA0;
+    -ph-accent: #BF9A54;
+    -ph-accent-hover: #CDAA68;
+    -ph-accent-soft: #3E3420;
+    -ph-accent-ink: #D9BE84;
+    -ph-on-accent: #261D12;
+    -ph-sidebar: #15100A;
+    -ph-sidebar-2: #261D12;
+    -ph-sidebar-line: #2E2417;
+    -ph-sidebar-text: #FFFFEA;
+    -ph-sidebar-muted: #A1A680;
+    -ph-sidebar-accent: #BF9A54;
+    -ph-sidebar-on-accent: #261D12;
+    -ph-sidebar-logo-bg: #FFFFEA;
+    -ph-sidebar-logo-fg: #261D12;
+    -ph-icon: #E8E4CC;
+    -ph-focus: rgba(191, 154, 84, 0.32);
+    -ph-shadow: rgba(0, 0, 0, 0.5);
+    -ph-danger: #C48A4E;
+    -ph-danger-hover: #D29C62;
+    -ph-inverse: #FFFFEA;
+    -ph-on-inverse: #261D12;
+
+    -ph-green: #A1A680;   -ph-green-soft: #33351F;   -ph-green-ink: #C6CAA5;
+    -ph-amber: #BF9A54;   -ph-amber-soft: #3E3420;   -ph-amber-ink: #D9BE84;
+    -ph-red: #C48A4E;     -ph-red-soft: #45311C;     -ph-red-ink: #DDB07E;
+    -ph-blue: #A1A680;    -ph-blue-soft: #33351F;    -ph-blue-ink: #C6CAA5;
+    -ph-teal: #A1A680;    -ph-teal-soft: #33351F;    -ph-teal-ink: #C6CAA5;
+    -ph-violet: #CBBDA0;  -ph-violet-soft: #3A3122;  -ph-violet-ink: #E2D6BC;
+    -ph-cyan: #A1A680;    -ph-cyan-soft: #33351F;    -ph-cyan-ink: #C6CAA5;
+    -ph-slate: #8E8F6E;   -ph-slate-soft: #2F301F;   -ph-slate-ink: #B9BA98;
+    -ph-gray: #5C4A33;    -ph-gray-soft: #2E2417;    -ph-gray-ink: #CBBDA0;
+    -ph-crimson: #FFFFEA; -ph-crimson-soft: #45311C; -ph-crimson-ink: #FFFFEA;
+}
