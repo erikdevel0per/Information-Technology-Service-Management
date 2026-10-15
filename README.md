@@ -91,7 +91,7 @@ Ele roda no Windows como qualquer outro programa: você instala com um assistent
 
 ### Interface
 
-- Paleta verde-oliva e mostarda (`#31401A`, `#BF9A54`, `#FFFFEA`, `#4D3A25`, `#261D12`, `#656643`, `#A1A680`, `#CBBDA0`) nos temas **claro** e **escuro**.
+- Paleta minimalista em cinzas, areia e preto (`#E8E8E8`, `#D9D1CE`, `#BAB7B5`, `#AB9D9D`, `#000000`) nos temas **claro** e **escuro**.
 - Movimento suave: troca de telas com transição, rolagem suave, cartões e indicadores animados. A janela abre maximizada, ocupando a tela inteira.
 - **Zoom** padrão de 75% (como 75% no navegador). Ajuste com <kbd>Ctrl</kbd> + rolagem do mouse ou <kbd>Ctrl</kbd> + <kbd>+</kbd> / <kbd>-</kbd>, de 50% a 175%; <kbd>Ctrl</kbd> + <kbd>0</kbd> volta a 75%. O nível escolhido fica salvo.
 - **Gráficos do Painel** em barras, colunas, linha ou rosca: cada gráfico tem botões para trocar a visualização, e a escolha fica salva.

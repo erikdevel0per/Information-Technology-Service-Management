@@ -242,7 +242,7 @@ public class InstallationService extends AbstractService {
                     {"Software", "Operating system", "E-mail", "Office", "Internal systems"},
                     {"Network", "Internet", "Wi-Fi", "VPN", "Telephony"},
                     {"Access", "Password", "Permissions", "New user"}};
-        String[] categoryColors = {"#656643", "#31401A", "#BF9A54", "#7A4A22"};
+        String[] categoryColors = {"#6B6262", "#000000", "#AB9D9D", "#8A2F2F"};
         i = 0;
         for (String[] group : categories) {
             String color = categoryColors[i % categoryColors.length];

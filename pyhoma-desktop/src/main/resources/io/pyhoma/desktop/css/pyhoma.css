@@ -603,7 +603,7 @@
 .lane-sort { -fx-background-color: -ph-accent; -fx-background-radius: 8; -fx-padding: 4 4 4 10; -ph-icon-color: -ph-on-accent; }
 .lane-sort-text { -fx-text-fill: -ph-on-accent; -fx-font-size: 11px; -fx-font-family: "IBM Plex Sans SemiBold"; }
 .button.lane-sort-clear { -fx-background-color: transparent; -fx-padding: 2 4 2 4; -fx-background-radius: 6; -ph-icon-color: -ph-on-accent; -fx-cursor: hand;  -fx-border-color: transparent; -fx-effect: null; }
-.button.lane-sort-clear:hover { -fx-background-color: rgba(255, 255, 234, 0.16); }
+.button.lane-sort-clear:hover { -fx-background-color: rgba(241, 239, 238, 0.16); }
 .kanban-card {
     -fx-background-color: -ph-surface;
     -fx-border-color: -ph-line;
@@ -676,7 +676,7 @@
 .people-chip { -fx-background-color: -ph-accent-soft; -fx-background-radius: 999; -fx-padding: 3 4 3 3; }
 .people-chip-text { -fx-text-fill: -ph-accent-ink; -fx-font-family: "IBM Plex Sans Medium"; -fx-font-size: 12.5px; }
 .button.people-chip-remove { -fx-background-color: transparent; -fx-padding: 3; -fx-background-radius: 999; -fx-cursor: hand; -ph-icon-color: -ph-accent-ink;  -fx-border-color: transparent; -fx-effect: null; }
-.button.people-chip-remove:hover { -fx-background-color: rgba(38, 29, 18, 0.10); }
+.button.people-chip-remove:hover { -fx-background-color: rgba(0, 0, 0, 0.08); }
 .button.people-add {
     -fx-background-color: transparent;
     -fx-text-fill: -ph-accent-ink;

@@ -11,7 +11,7 @@ Todas as mudanças relevantes deste projeto são registradas aqui. O formato seg
 - Links de documentos restritos e confirmados, CSV sem fórmulas, regex com tempo limitado, SQL Server com validação de certificado, H2 sem porta de rede e JVM sem anexação externa.
 
 ### Adicionado
-- Paleta verde-oliva e mostarda (oliva escuro, mostarda, creme, café, quase preto, oliva, sálvia e areia) nos temas claro e escuro.
+- Paleta minimalista (cinza-claro, areia, pedra, malva e preto) nos temas claro e escuro.
 - Animações suaves na navegação, rolagem suave, cartões e indicadores com movimento; a janela abre maximizada.
 - Zoom da interface com Ctrl + rolagem do mouse, Ctrl + / Ctrl - e Ctrl 0, com padrão de 75%.
 - Gráficos do Painel com troca de visualização (barras, colunas, linha ou rosca), lembrada por computador.

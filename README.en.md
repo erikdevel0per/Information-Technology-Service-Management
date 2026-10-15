@@ -67,7 +67,7 @@ The interface is available in Portuguese (Brazil) and English, with light and da
 - [**User manual (PDF, Portuguese)**](docs/manual/Manual-Pyhoma-Vers%C3%A3o%201.0.0.pdf) covering every screen, feature, shortcut and technical detail.
 
 **Interface**
-- Olive and mustard palette (`#31401A`, `#BF9A54`, `#FFFFEA`, `#4D3A25`, `#261D12`, `#656643`, `#A1A680`, `#CBBDA0`) in **light** and **dark** themes.
+- Minimalist palette in grays, sand and black (`#E8E8E8`, `#D9D1CE`, `#BAB7B5`, `#AB9D9D`, `#000000`) in **light** and **dark** themes.
 - Smooth motion: animated page transitions, smooth scrolling, lively cards and counters. The window opens maximized, filling the screen.
 - **Zoom** defaults to 75% (like 75% in a web browser). Change it with <kbd>Ctrl</kbd> + mouse wheel or <kbd>Ctrl</kbd> + <kbd>+</kbd> / <kbd>-</kbd>, from 50% to 175%; <kbd>Ctrl</kbd> + <kbd>0</kbd> goes back to 75%. The level is remembered.
 - **Dashboard charts** as bars, columns, line or donut: each chart has buttons to switch the view, and the choice is remembered.
