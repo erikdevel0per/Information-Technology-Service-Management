@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: atividade-diaria
+  cancel-in-progress: false
+
 jobs:
   commit:
     runs-on: ubuntu-latest
@@ -24,4 +28,5 @@ jobs:
           git config user.email "$GIT_EMAIL"
           git add .github/atividade.txt
           git commit -m "Atividade $(TZ=America/Sao_Paulo date '+%Y-%m-%d %Hh')"
+          git pull --rebase
           git push
