@@ -37,6 +37,7 @@ public class PyhomaApp extends Application {
             System.exit(0);
         });
         new StartupFlow(stage).start();
+        StartMenuShortcut.ensure();
     }
 
     @Override

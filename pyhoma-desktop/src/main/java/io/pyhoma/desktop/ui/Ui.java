@@ -146,7 +146,47 @@ public final class Ui {
         if (!stage.isMaximized()) {
             center(stage);
             stage.setMaximized(true);
+        } else if (!fillsScreen(stage)) {
+            stage.setMaximized(false);
+            stage.setMaximized(true);
         }
+        javafx.application.Platform.runLater(() -> {
+            if (stage.isShowing() && (!stage.isMaximized() || !fillsScreen(stage))) {
+                stage.setMaximized(false);
+                stage.setMaximized(true);
+            }
+        });
+    }
+
+    public static double[] sceneSize(javafx.stage.Stage stage, double width, double height) {
+        javafx.scene.Scene current = stage.getScene();
+        if (stage.isShowing() && stage.isMaximized() && current != null && current.getWidth() > 0 && current.getHeight() > 0) {
+            return new double[] {current.getWidth(), current.getHeight()};
+        }
+        return new double[] {width, height};
+    }
+
+    private static boolean fillsScreen(javafx.stage.Stage stage) {
+        javafx.collections.ObservableList<javafx.stage.Screen> screens = javafx.stage.Screen.getScreensForRectangle(
+                stage.getX(), stage.getY(), Math.max(1, stage.getWidth()), Math.max(1, stage.getHeight()));
+        javafx.geometry.Rectangle2D vb = (screens.isEmpty() ? javafx.stage.Screen.getPrimary() : screens.get(0)).getVisualBounds();
+        return stage.getWidth() >= vb.getWidth() - 2 && stage.getHeight() >= vb.getHeight() - 2;
+    }
+
+    public static void showCentered(javafx.stage.Stage stage) {
+        if (stage.isMaximized()) {
+            stage.setMaximized(false);
+        }
+        stage.sizeToScene();
+        if (!stage.isShowing()) {
+            stage.show();
+        }
+        center(stage);
+        javafx.application.Platform.runLater(() -> {
+            if (!stage.isMaximized()) {
+                center(stage);
+            }
+        });
     }
 
     public static void center(javafx.stage.Stage stage) {

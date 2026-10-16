@@ -51,6 +51,7 @@ public final class StartupFlow {
     private String lastLogin;
     private Scene launcherScene;
     private StackPane launcherSlot;
+    private boolean fullWindow;
 
     public StartupFlow(Stage stage) {
         this.stage = stage;
@@ -92,6 +93,9 @@ public final class StartupFlow {
         Dialogs.setOwner(stage);
         if (launcherScene != null && stage.getScene() == launcherScene) {
             launcherSlot.getChildren().setAll(content);
+            if (fullWindow && !stage.isMaximized()) {
+                stage.setMaximized(true);
+            }
             io.pyhoma.desktop.ui.Motion.fadeIn(content, 240);
             return;
         }
@@ -99,7 +103,10 @@ public final class StartupFlow {
         StackPane root = new StackPane(io.pyhoma.desktop.ui.Zoom.wrap(launcherSlot));
         root.getStyleClass().add("launcher-root");
         javafx.geometry.Rectangle2D screen = javafx.stage.Screen.getPrimary().getVisualBounds();
-        Scene scene = new Scene(root, Math.min(1040, screen.getWidth() * 0.94), Math.min(700, screen.getHeight() * 0.92));
+        double[] size = fullWindow
+                ? Ui.sceneSize(stage, Math.min(1040, screen.getWidth() * 0.94), Math.min(700, screen.getHeight() * 0.92))
+                : new double[] {Math.min(1040, screen.getWidth() * 0.94), Math.min(700, screen.getHeight() * 0.92)};
+        Scene scene = new Scene(root, size[0], size[1]);
         Theme.install(scene);
         io.pyhoma.desktop.ui.Motion.install(scene);
         io.pyhoma.desktop.ui.Zoom.install(scene, root);
@@ -108,7 +115,11 @@ public final class StartupFlow {
         stage.setResizable(true);
         stage.setMinWidth(Math.min(900, screen.getWidth() * 0.9));
         stage.setMinHeight(Math.min(620, screen.getHeight() * 0.9));
-        Ui.showMaximized(stage);
+        if (fullWindow) {
+            Ui.showMaximized(stage);
+        } else {
+            Ui.showCentered(stage);
+        }
         io.pyhoma.desktop.ui.Motion.fadeIn(content, 300);
     }
 
@@ -244,6 +255,8 @@ public final class StartupFlow {
     }
 
     private void startDemo() {
+        fullWindow = true;
+        stage.setMaximized(true);
         showProgress(I18n.t("demo.preparing"));
         String password = demoPassword();
         InstallRequest req = new InstallRequest(I18n.t("demo.org"), "demo", I18n.t("demo.user"), null, password,
@@ -256,6 +269,7 @@ public final class StartupFlow {
             return services.auth().login("demo", password);
         }, this::afterLogin, e -> {
             App.setDemo(false);
+            fullWindow = false;
             showWelcome();
             Dialogs.error(e);
         });
@@ -280,6 +294,7 @@ public final class StartupFlow {
     private void finishDemo(boolean configure) {
         App.shutdown();
         App.setDemo(false);
+        fullWindow = false;
         if (configure) {
             showDatabaseStep(false);
         } else {

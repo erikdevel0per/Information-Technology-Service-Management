@@ -92,7 +92,8 @@ public final class MainWindow {
         javafx.geometry.Rectangle2D screen = javafx.stage.Screen.getPrimary().getVisualBounds();
         double width = Math.min(parse(App.config().get("ui.width", "1366"), 1366), screen.getWidth() * 0.94);
         double height = Math.min(parse(App.config().get("ui.height", "820"), 820), screen.getHeight() * 0.92);
-        Scene scene = new Scene(root, width, height);
+        double[] size = Ui.sceneSize(stage, width, height);
+        Scene scene = new Scene(root, size[0], size[1]);
         Theme.install(scene);
         io.pyhoma.desktop.ui.Motion.install(scene);
         io.pyhoma.desktop.ui.Zoom.install(scene, root);
