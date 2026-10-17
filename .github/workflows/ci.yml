@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   pull_request:
+  schedule:
+    - cron: '7 11 * * *'  # todo dia às 08:07 (Brasília)
+  workflow_dispatch:
 
 permissions:
   contents: read
